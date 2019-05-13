@@ -65,7 +65,7 @@
         <h1><?php echo SITE_NAME; ?></h1>
         <h3>We Care About Your Health</h3>
         <br>
-        <a id="btn-make-appointment" href="<?php echo _f::is_user_logged_in() ? "./index.php#appointment": "./profile.php#login"; ?>" class="btn btn-dark btn-lg">Make Appointment</a>
+        <a id="btn-make-appointment" href="<?php echo _f::is_user_logged_in() ? "./index.php#appointment": "./profile.php#login"; ?>" class="btn btn-dark btn-lg">Make Appointment ABC</a>
     </div>
 </header>
 
