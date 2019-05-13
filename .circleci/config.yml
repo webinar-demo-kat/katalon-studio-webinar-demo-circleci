@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: Execute Katalon Studio
-          command: katalon-execute.sh -projectPath="/var/lib/jenkins/workspace/Katalon Webinar Demo/Tests/test.prj" -statusDelay=30 -retry=0 -testSuitePath="Test Suites/TS_RegressionTest" -executionProfile="staging" -browserType="Chrome (headless)"
+          command: katalon-execute.sh -statusDelay=30 -retry=0 -testSuitePath="Test Suites/TS_RegressionTest" -executionProfile="staging" -browserType="Chrome (headless)"
       - store-test_results:
           path: ./report
       - store-artifacts:
