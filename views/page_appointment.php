@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2>Make Appointment ABC</h2>
+                <h2>Make Appointment</h2>
                 <hr class="small">
             </div>
             <form class="form-horizontal" action="<?php echo SITE_URL.'appointment.php#summary'; ?>" method="post">
