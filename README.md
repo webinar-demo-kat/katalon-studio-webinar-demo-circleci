@@ -1,1 +1,1 @@
-# katalon-studio-webinar-demo-circleci
+# For CI/CD webinar demo
