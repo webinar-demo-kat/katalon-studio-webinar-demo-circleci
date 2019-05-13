@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://webinar-demo.katalon.com/'</initValue>
+      <initValue>'https://webinar-demo-kat.herokuapp.com'</initValue>
       <name>G_SiteURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
