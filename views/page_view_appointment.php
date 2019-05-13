@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h2>Appointment Confirmation</h2>
+                <h2>Appointment Confirmatio</h2>
                 <p class="lead">Please be informed that your appointment has been booked as following:</p>
                 <hr class="small">
             </div>
