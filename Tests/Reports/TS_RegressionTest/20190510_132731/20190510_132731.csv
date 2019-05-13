@@ -1,0 +1,28 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest,,,,2019-05-10 13:27:33,2019-05-10 13:27:41,7.918s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2019-05-10 13:27:33,2019-05-10 13:27:38,4.928s,FAILED
+"comment(""Story: Login to CURA system"")",,,,2019-05-10 13:27:34,2019-05-10 13:27:35,0.096s,PASSED
+"comment(""Given that the user has the valid login information"")",,,,2019-05-10 13:27:35,2019-05-10 13:27:35,0.019s,PASSED
+openBrowser(G_SiteURL),,,,2019-05-10 13:27:35,2019-05-10 13:27:36,1.697s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment,,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2019-05-10 13:27:38,2019-05-10 13:27:41,2.661s,FAILED
+"comment(""Story: Book an appointment"")",,,,2019-05-10 13:27:39,2019-05-10 13:27:39,0.006s,PASSED
+"comment(""Given that the user has logged into their account"")",,,,2019-05-10 13:27:39,2019-05-10 13:27:39,0.018s,PASSED
+openBrowser(G_SiteURL),,,,2019-05-10 13:27:39,2019-05-10 13:27:39,0.285s,FAILED

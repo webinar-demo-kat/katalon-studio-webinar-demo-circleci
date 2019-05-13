@@ -1,0 +1,76 @@
+1
+00:00:00,369 --> 00:00:00,370
+1. comment("Story: Book an appointment")
+
+2
+00:00:00,373 --> 00:00:00,374
+5. comment("Given that the user has logged into their account")
+
+3
+00:00:00,378 --> 00:00:00,379
+9. openBrowser(G_SiteURL)
+
+4
+00:00:05,636 --> 00:00:05,637
+13. callTestCase(findTestCase("Common Test Cases/Login"), ["Username":"John Doe", "Password":"ThisIsNotAPassword"], STOP_ON_FAILURE)
+
+5
+00:00:05,896 --> 00:00:05,897
+1. click(findTestObject("Page_CuraHomepage/btn_MakeAppointment"))
+
+6
+00:00:06,458 --> 00:00:06,459
+5. setText(findTestObject("Page_Login/txt_UserName"), Username)
+
+7
+00:00:06,647 --> 00:00:06,647
+9. setText(findTestObject("Page_Login/txt_Password"), Password)
+
+8
+00:00:06,811 --> 00:00:06,811
+13. click(findTestObject("Page_Login/btn_Login"))
+
+9
+00:00:07,504 --> 00:00:07,504
+17. landingPage = verifyElementPresent(findTestObject("Page_CuraAppointment/div_Appointment"), G_Timeout)
+
+10
+00:00:07,536 --> 00:00:07,537
+17. comment("And Appointment page is displayed")
+
+11
+00:00:07,545 --> 00:00:07,545
+21. if (true)
+
+12
+00:00:07,546 --> 00:00:07,547
+1. selectOptionByLabel(findTestObject("Page_CuraAppointment/lst_Facility"), "Hongkong CURA Healthcare Center", false)
+
+13
+00:00:07,659 --> 00:00:07,660
+5. check(findTestObject("Page_CuraAppointment/chk_Medicaid"))
+
+14
+00:00:07,744 --> 00:00:07,745
+9. check(findTestObject("Page_CuraAppointment/chk_Readmission"))
+
+15
+00:00:07,823 --> 00:00:07,823
+13. setText(findTestObject("Page_CuraAppointment/txt_VisitDate"), "27/12/2016")
+
+16
+00:00:08,006 --> 00:00:08,006
+17. setText(findTestObject("Page_CuraAppointment/txt_Comment"), "Please make appointment as soon as possible.")
+
+17
+00:00:08,208 --> 00:00:08,208
+25. comment("When he fills in valid information in Appointment page")
+
+18
+00:00:08,220 --> 00:00:08,220
+29. click(findTestObject("Page_CuraAppointment/btn_BookAppointment"))
+
+19
+00:00:08,623 --> 00:00:08,624
+33. verifyTextPresent("Appointment Confirmation", false)
+

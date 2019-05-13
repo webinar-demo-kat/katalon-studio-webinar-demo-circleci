@@ -1,0 +1,44 @@
+1
+00:00:00,352 --> 00:00:00,359
+1. comment("Story: Login to CURA system")
+
+2
+00:00:00,508 --> 00:00:00,510
+5. comment("Given that the user has the valid login information")
+
+3
+00:00:00,518 --> 00:00:00,518
+9. openBrowser(G_SiteURL)
+
+4
+00:00:06,017 --> 00:00:06,018
+13. click(findTestObject("Page_CuraHomepage/btn_MakeAppointment"))
+
+5
+00:00:06,621 --> 00:00:06,622
+17. setText(findTestObject("Page_Login/txt_UserName"), Username)
+
+6
+00:00:06,835 --> 00:00:06,836
+21. setText(findTestObject("Page_Login/txt_Password"), Password)
+
+7
+00:00:06,974 --> 00:00:06,976
+25. comment("When he logins to CURA system")
+
+8
+00:00:06,981 --> 00:00:06,982
+29. click(findTestObject("Page_Login/btn_Login"))
+
+9
+00:00:07,707 --> 00:00:07,710
+33. comment("Then he should be able to login successfully")
+
+10
+00:00:07,720 --> 00:00:07,721
+37. landingPage = verifyElementPresent(findTestObject("Page_CuraAppointment/div_Appointment"), G_Timeout)
+
+11
+00:00:07,771 --> 00:00:07,773
+41. closeBrowser()
+

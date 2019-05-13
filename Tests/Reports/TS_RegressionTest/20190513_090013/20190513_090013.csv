@@ -1,0 +1,28 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest,Chrome 74.0.3729.131,,,2019-05-13 09:00:20,2019-05-13 09:00:32,12.022s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,Chrome 74.0.3729.131,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2019-05-13 09:00:20,2019-05-13 09:00:27,6.942s,FAILED
+"comment(""Story: Login to CURA system"")",Chrome 74.0.3729.131,,,2019-05-13 09:00:21,2019-05-13 09:00:21,0.083s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 74.0.3729.131,,,2019-05-13 09:00:21,2019-05-13 09:00:21,0.008s,PASSED
+openBrowser(G_SiteURL),Chrome 74.0.3729.131,,,2019-05-13 09:00:21,2019-05-13 09:00:25,3.589s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment,Chrome 74.0.3729.131,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2019-05-13 09:00:27,2019-05-13 09:00:31,4.534s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 74.0.3729.131,,,2019-05-13 09:00:27,2019-05-13 09:00:27,0.005s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 74.0.3729.131,,,2019-05-13 09:00:27,2019-05-13 09:00:27,0.004s,PASSED
+openBrowser(G_SiteURL),Chrome 74.0.3729.131,,,2019-05-13 09:00:27,2019-05-13 09:00:29,1.979s,FAILED
