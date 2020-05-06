@@ -1,1 +1,1 @@
-# For CI/CD webinar demo
+# For CircleCI webinar demo
