@@ -9,9 +9,9 @@ import com.kms.katalon.core.testobject.TestObject
 
 import org.openqa.selenium.WebElement
 
-import com.applitools.eyes.selenium.Eyes
-
 import com.applitools.eyes.RectangleSize
+
+import com.applitools.eyes.selenium.Eyes
 
 import java.lang.Object
 
@@ -56,6 +56,12 @@ def static "com.example.WebUICustomKeywords.getHtmlTableColumns"(
          , 	tagName)
 }
 
+def static "com.kms.katalon.keyword.applitools.BasicKeywords.checkWindow"(
+    	String testName	) {
+    (new com.kms.katalon.keyword.applitools.BasicKeywords()).checkWindow(
+        	testName)
+}
+
 def static "com.kms.katalon.keyword.applitools.BasicKeywords.checkTestObject"(
     	TestObject testObject	
      , 	String testName	) {
@@ -64,10 +70,16 @@ def static "com.kms.katalon.keyword.applitools.BasicKeywords.checkTestObject"(
          , 	testName)
 }
 
-def static "com.kms.katalon.keyword.applitools.BasicKeywords.checkWindow"(
-    	String testName	) {
-    (new com.kms.katalon.keyword.applitools.BasicKeywords()).checkWindow(
-        	testName)
+def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesOpen"(
+    	String testName	
+     , 	RectangleSize viewportSize	) {
+    (new com.kms.katalon.keyword.applitools.EyesKeywords()).eyesOpen(
+        	testName
+         , 	viewportSize)
+}
+
+def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesInit"() {
+    (new com.kms.katalon.keyword.applitools.EyesKeywords()).eyesInit()
 }
 
 def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesClose"(
@@ -86,16 +98,22 @@ def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesOpenWithBaseline
          , 	viewportSize)
 }
 
-def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesInit"() {
-    (new com.kms.katalon.keyword.applitools.EyesKeywords()).eyesInit()
-}
-
-def static "com.kms.katalon.keyword.applitools.EyesKeywords.eyesOpen"(
-    	String testName	
-     , 	RectangleSize viewportSize	) {
-    (new com.kms.katalon.keyword.applitools.EyesKeywords()).eyesOpen(
-        	testName
-         , 	viewportSize)
+def static "com.devstored.browserstackConnect.IOS"(
+    	Object deviceName	
+     , 	Object deviceVersion	
+     , 	Object bsURL	
+     , 	Object projectName	
+     , 	Object title	
+     , 	Object deviceOrientation	
+     , 	Object networdProfile	) {
+    (new com.devstored.browserstackConnect()).IOS(
+        	deviceName
+         , 	deviceVersion
+         , 	bsURL
+         , 	projectName
+         , 	title
+         , 	deviceOrientation
+         , 	networdProfile)
 }
 
 def static "com.devstored.browserstackConnect.ANDROID"(
@@ -107,24 +125,6 @@ def static "com.devstored.browserstackConnect.ANDROID"(
      , 	Object deviceOrientation	
      , 	Object networdProfile	) {
     (new com.devstored.browserstackConnect()).ANDROID(
-        	deviceName
-         , 	deviceVersion
-         , 	bsURL
-         , 	projectName
-         , 	title
-         , 	deviceOrientation
-         , 	networdProfile)
-}
-
-def static "com.devstored.browserstackConnect.IOS"(
-    	Object deviceName	
-     , 	Object deviceVersion	
-     , 	Object bsURL	
-     , 	Object projectName	
-     , 	Object title	
-     , 	Object deviceOrientation	
-     , 	Object networdProfile	) {
-    (new com.devstored.browserstackConnect()).IOS(
         	deviceName
          , 	deviceVersion
          , 	bsURL

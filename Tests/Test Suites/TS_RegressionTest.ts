@@ -4,12 +4,11 @@
    <name>TS_RegressionTest</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2019-01-14T16:59:38</lastRun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>1</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
    <testSuiteGuid>1286ccc6-2057-418d-87af-23d00cc6cd0e</testSuiteGuid>
    <testCaseLink>
       <guid>12b1ed24-3d2b-4bed-87e1-7c72470cdce7</guid>
@@ -34,5 +33,23 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Main Test Cases/TC2_Verify Successful Appointment</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>20a2a095-d25c-4e00-9691-bde212378860</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common Test Cases/Login</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>19fe967b-1564-4705-aff2-848d45b84489</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>75fa3d79-7e92-4d55-b359-f7c9493ea288</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
