@@ -1,10 +1,44 @@
-version: 2.1
-orbs:
-    katalon-studio: katalon/katalon-studio@23.0.8
-
-workflows:
+version: 2
+jobs:
+  build:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push --force https://heroku:c3631a7f-fa25-43d5-9489-69e66286c978@git.heroku.com/webinar-demo-kat-staging.git master
   test:
+    docker:
+      - image: katalonstudio/katalon:7.2.1
+    steps:
+      - checkout
+      - run:
+          name: Execute Katalon Studio
+          command: cd Tests && katalon-execute.sh -statusDelay=30 -retry=0 -testSuitePath="Test Suites/TS_RegressionTest" -executionProfile="staging" -browserType="Chrome (headless)" -apiKey=d4810666-726e-48b6-93d1-5a0c730faefb
+      - store-test_results:
+          path: ./report
+      - store-artifacts:
+          path: ./report
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+      
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push --force https://heroku:c3631a7f-fa25-43d5-9489-69e66286c978@git.heroku.com/webinar-demo-kat-production.git master
+workflows:
+  version: 2
+  build_and_test:
     jobs:
-        - katalon-studio/run:
-                version: "latest"
-                command_arguments: '-browserType="Chrome" -retry=1 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - test
