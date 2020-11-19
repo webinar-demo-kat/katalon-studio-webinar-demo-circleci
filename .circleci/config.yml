@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: Execute Katalon Studio
-          command: pwd
+          command: ls
   deploy:
     docker:
       - image: buildpack-deps:trusty
