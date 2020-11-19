@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: Execute Katalon Studio
-          command: ls
+          command: cd Tests && katalonc.sh -statusDelay=30 -retry=0 -projectPath="/root/project/Tests/test.prj" -testSuitePath="Test Suites/TS_RegressionTest" -executionProfile="staging" -browserType="Chrome (headless)" -apiKey=160cf81b-cbc7-43e7-9e57-7af7ee7943c9
   deploy:
     docker:
       - image: buildpack-deps:trusty
