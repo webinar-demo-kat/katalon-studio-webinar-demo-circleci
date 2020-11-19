@@ -20,7 +20,6 @@ if (_f::post('hospital_readmission') === null) {
 if ($_SESSION['history'] === null) {
     $_SESSION['history'] = array();
 }
-
 array_push($_SESSION['history'], $_POST);
 
 echo _f::render("view_appointment", $_POST, true);
