@@ -48,6 +48,7 @@
             </div>
             <div class="col-xs-12">
                 <p class="text-center"><a class="btn btn-default" href="<?php echo SITE_URL; ?>">Go to Homepage</a></p>
+                <p class="text-center"><a class="btn btn-default" href="<?php echo SITE_URL; ?>">Go to Homepage</a></p>
             </div>
         </div>
     </div>
